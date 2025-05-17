@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primaria: #4f46e5;
+    --secundaria: #7c3ead;
+    --escuro: #0f1720;
+    --maisEscuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+header {
+    background: var(--primaria);
+    color: var(--claro);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-bottom: 3px solid var(--secundaria);
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+header li {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.menu-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    color: var(--claro);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.menu-link:hover {
+    background: var(--secundaria);
+    color: white;
+    transform: scale(1.05);
+}
+
+
+#trabalhos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.trabalho {
+    display: flex;
+    align-items: center;
+    background: var(--vidro);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.carrossel {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carrossel img {
+    width: 100%;
+    display: none;
+    border-radius: 10px;
+}
+
+.carrossel img:first-child {
+    display: block;
+}
+
+.descricao {
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+}
+
+.descricao h2 {
+    color: var(--primaria);
+    margin-bottom: 10px;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: var(--primaria);
+    color: var(--claro);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: var(--secundaria);
+}
+
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.menu-link::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
